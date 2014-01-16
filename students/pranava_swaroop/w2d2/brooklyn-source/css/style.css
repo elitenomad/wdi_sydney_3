@@ -1,0 +1,98 @@
+/* 
+
+## Style Hints: 
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+
+body{
+	font-family: Georgia,"Times New Roman",Serif;
+}
+
+.clearfix:after {
+			content: ".";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			line-height: 0;
+			height: 0;
+		}
+		 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+div{
+	margin: 0 auto;
+}
+
+div#container{
+	width: 940px;
+	min-height: 25px;
+	margin: 0 auto;
+}
+
+#logo{
+	width : 250px;
+	height: 30px;
+	background: url("../images/brook-and-lyn-logo.gif") no-repeat;
+}
+
+#row img{
+	width: 100%;
+	height: 100%;
+	padding:5px;
+}
+
+#row h4{
+	color:grey;
+	font-weight: bold;
+}
+
+#row p{
+	color: grey;
+	font-size:11px;
+	line-height: 20px;
+	text-align:justify;
+	text-justify:inter-word;
+}
+
+#row p span{
+	color:cyan;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+div#footer{
+	width: 940px;
+	min-height: 25px;
+	margin: 0 auto;
+	color:grey;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#row-inline{
+	display:inline-block;
+	padding:5px;
+	margin:10px;
+}
+
+#row-inline img{
+	border: 1px thick grey;
+	border-radius: 2px;
+}

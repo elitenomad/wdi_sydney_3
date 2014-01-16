@@ -1,0 +1,162 @@
+/* 
+Project Name: Ecard.ly
+Client: General Assembly 
+Author: Christopher Castig | @castig
+Developer @GA in NYC
+*/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+
+/*div {
+    border: 1px solid black;
+}
+*/
+body {
+     background-color: #d6d6d6;
+     color:#000000;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 12px;
+     line-height: 1.1;
+     
+}
+
+header{
+     background: url('../images/background.jpg');
+     height: 150px;
+     margin:0;
+}
+
+
+
+.ecardlogo {
+  width: 250px; 
+  height: 250px;
+  background: url("../images/logo.png") no-repeat;
+  margin: 0 0 0 500px;
+  z-index: 1;
+}
+
+#container{
+     width : 640px;
+     height: 1300px;
+     min-height: 1300px;
+     margin: 75px 150px 75px 150px;
+     background: #FFF;
+     float:left;
+}
+
+#content span {
+    width: 100%;
+    border-top: dashed #999 1px;
+    border-bottom: dashed #999 1px;
+    display: block;
+}
+
+#container2{
+     width : 280px;
+     height: 750px;
+     margin: 75px -50px 75px -50px;
+     padding: 15px;
+     background: #FFF;
+     float:left;
+     
+}
+
+
+
+#content{
+     margin: 10px;
+     margin-bottom: 40px;
+}
+
+#content h3{
+     margin:10px;
+     padding:10px;
+}
+
+
+.imgright {
+     float: left;
+     margin: 0 10px 10px 0;
+}
+
+.imgleft {
+     float: left; 
+     margin: 0 10px 10px 0;
+}
+
+.imgborder {
+     border: 5px solid #CCC;  
+}
+
+/*----------------------------------------------------------------------------- 
+=05 SOCIAL MEDIA  
+-----------------------------------------------------------------------------*/
+
+
+
+#socialMedia {
+    text-align: center;
+
+}
+
+
+#socialMedia ul li {
+      display:inline-block;
+      width:60px;
+      height:60px;
+      background:blue;   
+      text-indent:-9999em;  
+}
+
+#socialMedia ul li.twitter {
+     background:url(../images/social-icon-twitter.png)  no-repeat; 
+}
+
+#socialMedia ul li.facebook {
+     background:url(../images/social-icon-facebook.png)  no-repeat; 
+}
+
+#socialMedia ul li.pinrest {
+     background:url(../images/social-icon-pinterest.png)  no-repeat; 
+}
+
+
+#socialMedia ul li.twitter:hover {
+    background:url(../images/social-icon-twitter.png)  no-repeat; 
+}
+
+#socialMedia ul li.facebook:hover {
+     background:url(../images/social-icon-facebook.png)  no-repeat; 
+}
+
+#socialMedia ul li.pinrest:hover {
+     background:url(../images/social-icon-pinterest.png)  no-repeat; 
+}
+
+
+
+
+
+
