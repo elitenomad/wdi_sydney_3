@@ -49,12 +49,14 @@ post '/contact' do
       :subject =>"#{name} has contacted you",
       :body => "#{message}",
       :via => :sendmail) 
-
-    redirect '/home'
+    @message = "Thanks for contacting us. Email received"
+    erb :contact
   rescue
     @exception = $!
     erb :index
+    @message = "Mail didn't get delievered due to server issues"
   end
+  
 end
 
 not_found do
