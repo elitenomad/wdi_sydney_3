@@ -1,0 +1,14 @@
+header{
+	margin: 0 auto;
+	width : 940px;
+	height : 50px;
+	border: 1px solid black;
+	text-align: right;
+}
+
+.container{
+	margin: 0 auto;
+	width : 800px;
+	height : auto;
+	text-align: center;
+}

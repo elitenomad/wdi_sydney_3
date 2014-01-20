@@ -1,0 +1,16 @@
+<div class="container">
+	<h3><%= @blog['title'] %></h3> (<%= @blog['description'] %>)
+	<p><%= @blog['bodydesc'] %> </p>
+	<p> <%= @blog['author'] %> </p>
+	<p> <%= @blog['created_at'] %> </p>
+	
+	<form action="/posts/<%= @blog['id'] %>/edit" method="post">
+		<button type='submit'>edit</button>
+	</form>
+	<form action="/posts/<%= @blog['id'] %>/destroy" method="post">
+		<input type='hidden' name='_method' id='_method' value="delete">
+		<button type='submit'>delete</button>
+
+	</form>
+	
+</div>

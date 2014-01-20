@@ -1,0 +1,18 @@
+<table border="1px solid grey">
+	<thead>
+		<th>Title</th>
+		<th>Short Description</th>
+		<th>Author</th>
+	</thead>
+<% @blogs.each do |blog| %>
+	<tr>
+		<td> <a href="/posts/<%= blog['id'] %>"><%= blog['title'] %> </a> </td>
+		<td> <%= blog['description'] %> </td>
+		<td> <%= blog['author'] %> </td>
+	</tr>
+<% end %>
+</table>
+<br/>
+<form action='/new' method="get">
+	<button type="submit">create blog</button>
+</form>

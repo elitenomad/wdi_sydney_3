@@ -1,0 +1,38 @@
+<h3>Edit a Blog - <%= @blog['title'] %></h3>
+	<div class="container">
+		<form action="/posts/<%= @blog['id'] %>/update" method="post">
+
+			<table>
+				<tr>
+					<td><label for="title">Title:</label></td>
+					<td><input type="text" name="title" size=50 value="<%= @blog['title']%>" required/></td>
+				</tr>
+				<tr>
+					<td><label for="description">Description:</label></td>
+					<td><input type="text" name="description" size=50 value="<%= @blog['description']%>" required ></td>
+				</tr>
+				<tr>
+					<td><label for="bodydesc">Information:</label></td>
+					<td><textarea name="bodydesc" rows="10" cols="35" ><%= @blog['bodydesc']%></textarea></td>
+				</tr>
+				<tr>
+					<td><label for="Author">Author:</label></td>
+					<td><input type="text" name="author" size=50 value="<%= @blog['author']%>"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<input type='hidden' id='_method' name='_method' value='put'/>
+					<td><button type="submit" size="30">Update Blog</button></td>
+					
+				</tr>
+			</table>
+		</form>
+	</div>
