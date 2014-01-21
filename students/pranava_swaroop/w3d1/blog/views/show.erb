@@ -1,16 +1,55 @@
 <div class="container">
-	<h3><%= @blog['title'] %></h3> (<%= @blog['description'] %>)
-	<p><%= @blog['bodydesc'] %> </p>
-	<p> <%= @blog['author'] %> </p>
-	<p> <%= @blog['created_at'] %> </p>
-	
-	<form action="/posts/<%= @blog['id'] %>/edit" method="post">
-		<button type='submit'>edit</button>
-	</form>
-	<form action="/posts/<%= @blog['id'] %>/destroy" method="post">
-		<input type='hidden' name='_method' id='_method' value="delete">
-		<button type='submit'>delete</button>
+	<div class="row">
+		<div class="col-md-8">
+			<h3><%= @blog['title'] %> <span class="small">(<%= @blog['description'] %>)</span></h3> 
+			<p class="well text-justify"><%= @blog['bodydesc'] %> </p>
+			<p class="text-muted pull-right"> <%= @blog['author'] %>| <%= @blog['created_at'] %> </p>
+			
+			<form class="editform" action="/posts/<%= @blog['id'] %>/edit" method="post">
+				<button class="btn btn-primary" type='submit'>edit</button>
+			</form>
 
-	</form>
-	
+			<form class="editform" action="/posts/<%= @blog['id'] %>/destroy" method="post">
+				<input type='hidden' name='_method' id='_method' value="delete">
+				<button class="btn btn-danger" type='submit'>delete</button>
+
+			</form>
+		</div>
+	</div>
+</div>
+<br/>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<% if @comments.to_a.size > 0 %>
+				<% @comments.each do |c|%>
+					
+						<blockquote class="pull-left">
+							<p><%= c['comment'] %></p>
+							 <small>created on <%= c['created_at'] %> by <cite title="Author" ><%= c['author'] %></cite></small>
+						</blockquote>
+					
+				<% end %>
+			<% else %>
+				<hr/>
+					<p class="text-muted">No comments submitted for this blog</p>
+				<hr/>
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+			<div class="col-md-4">
+				<h3>So, what do you think?</h3>
+				<form role="form" class="form-horizantal" action="/posts/<%= @blog['id']%>/comment/create" method='post'>
+					<label for="Author">Author:</label>
+					<input type="text" name="author" size=50>
+					<label for="comment">Comment:</label>
+					<textarea name="comment" rows="10" cols="75"></textarea>
+					<p></p><p></p>
+					<button class="btn btn-default pull-left">Post a comment</button> 
+				</form>
+			</div>
+		</div>
 </div>

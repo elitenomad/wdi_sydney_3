@@ -1,7 +1,9 @@
+<div class="container">
 <h3>Create a New Blog</h3>
-	<div class="container">
+	<div class="row">
+		<div class="col-md-4">
 		<form action="/create" method="post">
-			<table>
+			<table class="table">
 				<tr>
 					<td><label for="title">Title:</label></td>
 					<td><input type="text" name="title" size=50 required/></td>
@@ -12,25 +14,20 @@
 				</tr>
 				<tr>
 					<td><label for="bodydesc">Information:</label></td>
-					<td><textarea name="bodydesc" rows="10" cols="35"></textarea></td>
+					<td><textarea name="bodydesc" rows="10" cols="75"></textarea></td>
 				</tr>
 				<tr>
 					<td><label for="Author">Author:</label></td>
 					<td><input type="text" name="author" size=50></td>
 				</tr>
+				
 				<tr>
 					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><button type="submit" size="30">Create Blog</button></td>
+					<td><button class="btn btn-primary pull-right" type="submit" size="30">Create Blog</button></td>
 					
 				</tr>
 			</table>
 		</form>
+		</div>
 	</div>
+</div>

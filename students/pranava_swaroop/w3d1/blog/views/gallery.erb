@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1">
+		<ul class="list-group">
+		<% @rows.each do  |row| %>
+			
+			  <li class="list-group-item">
+			    <span class="badge"><%= row['count'] %></span>
+			    <%= row['author'] %>
+			  </li>
+			
+		<% end %>
+		</ul>
+		</div>
+	</div>
+</div>
