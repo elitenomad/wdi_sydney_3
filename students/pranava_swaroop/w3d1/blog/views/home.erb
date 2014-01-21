@@ -5,12 +5,14 @@
 			<th><a href="/?sort=title">Title</a></th>
 			<th><a href="#">Short Description</a></th>
 			<th><a href="/?sort=updated_at">Updated At</a></th>
+			<th><a href="/?sort=created_at">Created At</a></th>
 		</thead>
 	<% @blogs.each do |blog| %>
 		<tr>
 			<td> <a href="/posts/<%= blog['id'] %>"><%= blog['title'] %> </a> </td>
 			<td> <%= blog['description'] %> </td>
 			<td> <%= blog['updated_at'] %> </td>
+			<td> <%= blog['created_at'] %> </td>
 		</tr>
 	<% end %>
 	</table>

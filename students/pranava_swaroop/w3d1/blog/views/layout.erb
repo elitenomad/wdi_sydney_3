@@ -25,14 +25,18 @@
 	</header>
 
 	<div class="container">
+		<% if session[:admin] %>	
+			<p class="small">Logged in as <%= settings.username %>, <a href="/logout">logout</a></p>
+		<% end %>
 		<hr/>
 		<div class="row">
+			<% if session[:admin] %>
 			<div class="col-md-4">
 				<div class="sidebar-nav">
 			        <div class="well" style="width:300px; padding: 8px 0;">
 			    		<ul class="nav nav-pills nav-stacked"> 
 			    		         
-			    		  <li><a href="/"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+			    		  <li><a href="/posts"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
 			    		  <li><a href="/new"><span class="glyphicon glyphicon-plus"></span> Add Blog Post</a></li>
 			    		  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Members</a></li>
 			    		  <li><a href="#"><span class="glyphicon glyphicon-comment"></span> Comments</a></li>
@@ -41,6 +45,7 @@
 			    	</div>
 			    </div>
 		    </div>
+		    <% end %>
 		    <div class="col-md-8">
 		    		<%= yield %>
 		    </div>

@@ -4,6 +4,12 @@ require 'pry'
 require 'active_support/all'
 require 'pg'
 
+configure do
+	enable :sessions
+	set :username, 'admin'
+	set :password, 'admin'
+end
+
 
 helpers do
 	def run_sql(sql)
@@ -24,6 +30,26 @@ helpers do
 end
 
 get '/' do
+  erb :login
+end
+
+post '/login' do
+  	if params[:username] == settings.username && params[:password] == settings.password 
+		session[:admin] = true 
+		session[:username] = params[:username]
+
+		redirect to('/posts')
+    else
+    	erb :login
+	end
+end
+
+get '/logout' do
+  session.clear
+  redirect to('/')
+end
+
+get '/posts' do
 	n = params[:sort]
 	if n.nil? || n.empty?
 		sql ="SELECT * FROM blog order by created_at desc"
@@ -50,7 +76,7 @@ get '/posts/:id' do
 end
 
 get '/new' do
-
+	#halt(401,'Not Authorized') unless session[:admin]
 	erb :new
 end
 
@@ -62,7 +88,7 @@ post '/create' do
 	
 	run_sql(sql)
 
-	redirect to '/'
+	redirect to '/posts'
 end
 
 
@@ -83,7 +109,7 @@ put '/posts/:id/update' do
 			where id='#{params[:id]}'"
 	res = run_sql(sql)
 	
-	redirect to '/'
+	redirect to '/posts'
 end	
 
 delete '/posts/:id/destroy' do
@@ -91,7 +117,7 @@ delete '/posts/:id/destroy' do
 	sql = "DELETE  from blog where id=#{params[:id]}"
 	res = run_sql(sql)
 
-	redirect to '/'
+	redirect to '/posts'
 end
 
 get '/gallery' do
@@ -111,4 +137,5 @@ post '/posts/:id/comment/create' do
 
 	redirect to "/posts/#{params[:id]}"
 end
+
 	

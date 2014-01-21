@@ -44,9 +44,9 @@
 				<h3>So, what do you think?</h3>
 				<form role="form" class="form-horizantal" action="/posts/<%= @blog['id']%>/comment/create" method='post'>
 					<label for="Author">Author:</label>
-					<input type="text" name="author" size=50>
+					<input type="text" name="author" placeholder="Enter your name"size=50>
 					<label for="comment">Comment:</label>
-					<textarea name="comment" rows="10" cols="75"></textarea>
+					<textarea name="comment" rows="10" cols="75" placeholder="Post a comment"></textarea>
 					<p></p><p></p>
 					<button class="btn btn-default pull-left">Post a comment</button> 
 				</form>
