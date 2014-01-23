@@ -23,10 +23,10 @@ helpers do
 		res
 	end
 
-	def self.escape_characters_in_string(string)
-	    pattern = /(\'|\"|\.|\*|\/|\-|\\)/
-	    string.gsub(pattern){|match|"\\"  + match}
-	end
+	# def self.escape_characters_in_string(string)
+	#     pattern = /(\'|\"|\.|\*|\/|\-|\\)/
+	#     string.gsub(pattern){|match|"\\"  + match}
+	# end
 end
 
 get '/' do

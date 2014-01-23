@@ -16,7 +16,7 @@ ActiveRecord::Base.establish_connection(
 
 
 class Blog < ActiveRecord::Base
-	has_many :comments
+	has_many :comments,dependent: :destroy
 
 	validates :title, presence: true 
 	validates :title, uniqueness: true
@@ -107,7 +107,7 @@ end
 
 get '/posts/:id/show' do
 	@blog = Blog.find("#{params[:id]}")
-	@comments = Comment.where(blog_id:"#{params[:id]}")
+	@comments = @blog.comments #Comment.where(blog_id:"#{params[:id]}")
 	erb :show
 end
 
@@ -121,7 +121,7 @@ put '/posts/:id/update' do
 	now = Time.now
 	c=nil
 	c = Blog.find(params[:id])
-	c.update_attributes(title:"#{params[:title]}",description:"#{params[:description]}",
+	c.update_attributes(title: params[:title],description:"#{params[:description]}",
 		bodydesc:"#{params[:bodydesc]}",author:"#{params[:author]}",updated_at:"#{now}")
 	
 	if c.valid?
@@ -134,9 +134,10 @@ end
 
 
 delete '/posts/:id/destroy' do
-	comments = Comment.find_by(blog_id:"#{params[:id]}")
-	comments.destroy if !comments.nil?
-	Blog.delete("#{params[:id]}")
+	#comments = Comment.find_by(blog_id:"#{params[:id]}")
+	#comments.destroy if !comments.nil?
+	blog = Blog.find(params[:id])
+	blog.destroy
 
 	redirect to '/posts'
 end
