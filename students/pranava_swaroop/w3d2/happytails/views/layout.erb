@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HappyTails</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <!-- Bootstrap -->
+	   <link href="/css/bootstrap.css" rel="stylesheet">
+	   <link rel="icon" href="/img/ga.png" type="/image/png">
+	    <link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Elsie' rel='stylesheet' type='text/css'>
+		
+
+	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	    <![endif]-->
+	    
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <nav class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Happy Tails</a>
+                    <% if session[:admin] %>	
+						<p class="small" style="color:#fff">Logged in as <%= settings.username %>, <a href="/logout">logout</a></p>
+					<% end %>
+                </div>
+
+                <nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/"><span class="glyphicon glyphicon-home"></span></a></li>
+                        <li><a href="" data-toggle="modal" data-target="#modal-contact-form">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+
+            </nav>
+    	</div>
+	<br/>
+
+	<!-- Modal -->
+	    <div class="modal fade" id="modal-contact-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	        <div class="modal-dialog">
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                    <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+	                </div>
+	                <div class="modal-body">
+	                    <form action="/contact" method="post" class="form-horizontal" role="form">
+	                        <div class="control-group">
+	                            <label for="contact_name" class="control-label">Name:</label>
+
+	                            <div class="controls">
+	                                <input type="text" id="contact_name" name="contact_name" required />
+	                            </div>
+	                        </div>
+
+	                        <div class="control-group">
+	                            <label for="contact_email" class="control-label">Email:</label>
+
+	                            <div class="controls">
+	                                <input type="email" id="contact_email" name="contact_email" required/>
+	                            </div>
+	                        </div>
+
+	                        <div class="control-group">
+	                            <label for="contact_message" class="control-label">Message:</label>
+
+	                            <div class="controls">
+	                                <textarea name="contact_message" id="contact_message"  cols="40" rows="10" required></textarea>
+	                            </div>
+	                        </div>
+							<br/>
+	                        <div class="control-group">
+	                            <div class="controls">
+	                                <input type="submit" class="btn btn-primary" value="Send Message" />
+	                            </div>
+	                        </div>
+	                    </form>
+	                   
+	                </div>
+	                <div class="modal-footer">
+	                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	                    
+	                </div>
+	            </div><!-- /.modal-content -->
+	        </div><!-- /.modal-dialog -->
+	    </div><!-- /.modal -->
+		
+		<br/>
+	<div class="container">
+
+		<div class="row">
+			
+		    <div class="col-md-12">
+		    	<% if flash[:notice] %>
+		    		<p class="well text-info"><%= flash[:notice] %></p>
+		    	<% end %>
+		    		<%= yield %>
+		    </div>
+	    </div>
+    </div>
+    
+   <div class="container">
+
+		<div class="row">
+			<hr/>
+				<footer>
+					© 2013 General Assembly. All rights reserved.
+				</footer>
+			</div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="/js/bootstrap.js"></script>
+	    <script type="text/javascript">
+	    	$(document).ready(function(){
+	    		$('a').on('click',function(e){
+	    		})
+	    	})
+	    </script>
+</body>
+</html>

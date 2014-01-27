@@ -1,0 +1,64 @@
+<div class="row">
+	<h4><%=  @shelter.name %></h4> <br/>
+	<form role="form"  action="/shelters/<%= @shelter.id %>/filter" method="get" >
+		<div class="col-md-2">
+			<label for="spieces">Spieces:</label>
+		</div>
+		<div class="col-md-4">
+			<select class="form-control" type="text" name="spieces" >
+				<option>Dog</option>
+				<option>Cat</option>
+				<option>Parrot</option>
+			</select>
+		</div>
+		<div class="col-md-3">
+			<input type=hidden name="filter" value="spieces"/>
+			<button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-filter"></span> Spieces</button>
+		</div>
+	</form>
+</div>
+<br/>
+<div class="row">
+	<form role="form"  action="/shelters/<%= @shelter.id %>/filter" method="get" >
+		<div class="col-md-2">
+			<label for="relation">Age:</label>
+		</div>
+		<div class="col-md-2">
+			<select class="form-control" type="text" name="relation" >
+				<option>=</option>
+				<option>></option>
+				<option><</option>
+				<option><=</option>
+				<option>>=</option>
+			</select>
+		</div>
+		<div class="col-md-2">
+			<input class="form-control" type=number name="age" />
+		</div>
+		<div class="col-md-3">
+			<input type=hidden name="filter" value="age"/>
+			<button class="btn btn-default pull-right" type="submit"><span class="glyphicon glyphicon-filter"></span> age</button>
+		</div>
+	</form>
+</div>
+<br/>
+<div class="row">
+	<% if !@pets.nil? %>
+	  <% @pets.each do |pet| %>
+
+		  <div class="col-md-3">
+		  <div id="thumbnails">
+		    <div class="thumbnail">
+		      <img src='/img/custom/<%= pet.image_url %>' data-src="holder.js/200x200" alt="...">
+		      <div class="caption">
+		        <h4><%= pet.name %></h4>
+		        <p><span>Age: </span><%= pet.age %></p>
+		        <p><span>Adopted: </span><%= pet.adopted %></p>
+		        <p><span>Donated: </span> <%= diff_time_in_days(pet.donated_at) %> days ago </p>
+		      </div>
+		    </div>
+		    </div>
+		  </div>
+	  <% end %>
+	<% end %>
+</div>

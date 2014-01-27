@@ -1,0 +1,55 @@
+<div class="row">
+	<div class="col-md-12">
+		<a class="btn btn-default" href="/shelters/<%= @shelter['id'] %>/pets/new"><span class="glyphicon glyphicon-plus-sign"></span> Donate a pet</a>
+		<a class="btn btn-default" href="/shelters/<%= @shelter['id'] %>/adopted"><span class="glyphicon glyphicon-record"></span> Adopted pets</a>
+		<a class="btn btn-default" href="/shelters/<%= @shelter['id'] %>/filter"><span class="glyphicon glyphicon-record"></span> Filter criteria</a>
+		<h3><%= @shelter['name'] %> <span class="small">(<%= @shelter['location'] %>)</span></h3> 
+		
+		<p class="well text-justify"><%= @shelter['description'] %> </p>
+		<p class="text-muted pull-right"> <%= @shelter['tot_capacity'] %>| <%= @shelter['capacity'] %>  slots left</p>
+		
+		<form class="editform" action="/shelters/<%= @shelter['id'] %>" method="post">
+			<button class="btn btn-primary" type='submit'>edit</button>
+		</form>
+
+		<form class="editform" action="/shelters/<%= @shelter['id'] %>" method="post">
+			<input type='hidden' name='_method' id='_method' value="delete">
+			<button class="btn btn-danger" type='submit'>delete</button>
+
+		</form>
+	</div>
+</div>
+
+<br/>
+<div class="row">
+	<div class="col-md-12">
+		<div class="well well-sm pull-right">
+			<a href="/shelters/<%= @shelter['id'] %>?sort=name" class="btn btn-link">Name</a>
+			<a href="/shelters/<%= @shelter['id'] %>?sort=spieces" class="btn btn-link">Spieces</a>
+			<a href="/shelters/<%= @shelter['id'] %>?sort=breed" class="btn btn-link">Breed</a>
+			<a href="/shelters/<%= @shelter['id'] %>?sort=age" class="btn btn-link">Age</a>
+		</div>
+	</div>
+</div>
+<br/>
+<div class="row">
+	
+	  <% @pets.each do |pet| %>
+
+		  <div class="col-md-3">
+		  <div id="thumbnails">
+		    <div class="thumbnail">
+		      <img src='/img/custom/<%= pet.image_url %>' data-src="holder.js/200x200" alt="...">
+		      <div class="caption">
+		        <h4><%= pet.name %></h4>
+		        <p><span>Age: </span><%= pet.age %></p>
+		        <p><span>Adopted: </span><%= pet.adopted %></p>
+		        <p><span>Donated: </span> <%= diff_time_in_days(pet.donated_at) %> days ago </p>
+		        <p><a href="/shelters/<%= @shelter['id'] %>/pets/<%= pet.id %>/adopt" class="btn btn-default" role="button">Adopt</a></p>
+		      </div>
+		    </div>
+		    </div>
+		  </div>
+	  <% end %>
+	
+</div>

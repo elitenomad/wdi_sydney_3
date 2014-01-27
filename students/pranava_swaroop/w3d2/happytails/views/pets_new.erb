@@ -1,0 +1,62 @@
+<div class="container">
+<h3>Add a pet to <%= @shelter.name %> at <%= @shelter.location %> </h3>
+	<div class="row">
+		<div class="col-md-4">
+
+		<% if  !@created.nil? && @created.errors.any? %>
+			  <div class="well">
+			    <div class="text-danger">
+			      The form contains <%= @created.errors.count %> errors.
+			    </div>
+			    <ul>
+			    <% @created.errors.full_messages.each do |msg| %>
+			      <li><p class="text-danger"><%= msg %></p></li>
+			    <% end %>
+			    </ul>
+			  </div>
+			<% end %>
+			<form action="/shelters/<%= @shelter['id'] %>/pets/create" method="post">
+
+				<table class="table">
+					<tr>
+						<td><label for="name">Name:</label></td>
+						<td><input class="form-control" type="text" name="name" autofocus /></td>
+					</tr>
+					<tr>
+						<td><label for="spieces">Spieces:</label></td>
+						<td>
+							<select class="form-control" type="text" name="spieces" >
+								<option>Dog</option>
+								<option>Cat</option>
+								<option>Parrot</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="breed">Breed:</label></td>
+						<td><input class="form-control" type="text" name="breed" ></td>
+					</tr>
+					<tr>
+						<td><label for="age">Age:</label></td>
+						<td><input class="form-control" type="number" name="age"  ></td>
+					</tr>
+					<tr>
+						<td><label for="image_url">Image:</label></td>
+						<td><input class="form-control" type="text" name="image_url" ></td>
+					</tr>
+					<tr>
+						<td><label for="donated_at">Donated on:</label></td>
+						<td><input class="form-control" type="date" name="donated_at" ></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button class="btn btn-primary pull-right" type="submit" size="30">Donate</button>
+						</td>
+						<td><a class="btn btn-default pull-right" href="/shelters" size="30">Back to shelters</button></td>
+						
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>

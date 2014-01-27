@@ -1,0 +1,48 @@
+<div class="container">
+<h3>Edit a Shelter - <%= @shelter['name'] %></h3>
+	<div class="row">
+		<div class="col-md-4">
+
+			<% if  !@shelter.nil? && @shelter.errors.any? %>
+			  <div class="well">
+			    <div class="text-danger">
+			      The form contains <%= @shelter.errors.count %> errors.
+			    </div>
+			    <ul>
+			    <% @shelter.errors.full_messages.each do |msg| %>
+			      <li><p class="text-danger"><%= msg %></p></li>
+			    <% end %>
+			    </ul>
+			  </div>
+			<% end %>
+			<form action="/shelters/<%= @shelter['id'] %>" method="post">
+
+				<table class="table">
+					<tr>
+						<td><label for="name">Name:</label></td>
+						<td><input class="form-control" type="text" name="name" size=50 value="<%= @shelter['name']%>" autofocus /></td>
+					</tr>
+					<tr>
+						<td><label for="description">Description:</label></td>
+						<td><textarea name="description" rows="10" cols="75"><%= @shelter['description']%></textarea></td>
+					</tr>
+					<tr>
+						<td><label for="location">Location:</label></td>
+						<td><input class="form-control" type="text" name="location" value="<%= @shelter['location']%>"></td>
+					</tr>
+					<tr>
+						<td><label for="capacity">Tot Capacity:</label></td>
+						<td><input class="form-control" type="text" name="tot_capacity" size=50 value="<%= @shelter['capacity']%>"></td>
+					</tr>
+				
+					<tr>
+						<td></td>
+						<input type='hidden' id='_method' name='_method' value='put'/>
+						<td><button class="btn btn-primary pull-right" type="submit" size="30">Update Blog</button></td>
+						
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>

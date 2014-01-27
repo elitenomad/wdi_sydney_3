@@ -1,0 +1,123 @@
+# Logfile created on 2014-01-23 22:33:51 +1100 by logger.rb/41954
+I, [2014-01-23T22:33:51.341473 #898]  INFO -- : 0:  i18n (0.6.9) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/i18n-0.6.9.gemspec
+I, [2014-01-23T22:33:51.341813 #898]  INFO -- : 0:  minitest (4.7.5) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/minitest-4.7.5.gemspec
+I, [2014-01-23T22:33:52.061035 #898]  INFO -- : 0:  multi_json (1.8.4) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/multi_json-1.8.4.gemspec
+I, [2014-01-23T22:33:52.061337 #898]  INFO -- : 0:  atomic (1.1.14) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/atomic-1.1.14.gemspec
+I, [2014-01-23T22:33:52.061538 #898]  INFO -- : 0:  thread_safe (0.1.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/thread_safe-0.1.3.gemspec
+I, [2014-01-23T22:33:52.061733 #898]  INFO -- : 0:  tzinfo (0.3.38) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/tzinfo-0.3.38.gemspec
+I, [2014-01-23T22:33:52.061928 #898]  INFO -- : 0:  activesupport (4.0.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activesupport-4.0.2.gemspec
+I, [2014-01-23T22:33:52.062116 #898]  INFO -- : 0:  builder (3.1.4) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/builder-3.1.4.gemspec
+I, [2014-01-23T22:33:52.062306 #898]  INFO -- : 0:  activemodel (4.0.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activemodel-4.0.2.gemspec
+I, [2014-01-23T22:33:52.062492 #898]  INFO -- : 0:  activerecord-deprecated_finders (1.0.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activerecord-deprecated_finders-1.0.3.gemspec
+I, [2014-01-23T22:33:52.062676 #898]  INFO -- : 0:  arel (4.0.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/arel-4.0.1.gemspec
+I, [2014-01-23T22:33:52.062865 #898]  INFO -- : 0:  activerecord (4.0.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activerecord-4.0.2.gemspec
+I, [2014-01-23T22:33:52.063049 #898]  INFO -- : 0:  addressable (2.3.5) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/addressable-2.3.5.gemspec
+I, [2014-01-23T22:33:52.702468 #898]  INFO -- : 0:  daemons (1.1.9) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/daemons-1.1.9.gemspec
+I, [2014-01-23T22:33:52.702756 #898]  INFO -- : 0:  data_objects (0.10.13) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/data_objects-0.10.13.gemspec
+I, [2014-01-23T22:33:52.702941 #898]  INFO -- : 0:  dm-core (1.2.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-core-1.2.1.gemspec
+I, [2014-01-23T22:33:52.703121 #898]  INFO -- : 0:  dm-do-adapter (1.2.0) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-do-adapter-1.2.0.gemspec
+I, [2014-01-23T22:33:52.703299 #898]  INFO -- : 0:  dm-migrations (1.2.0) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-migrations-1.2.0.gemspec
+I, [2014-01-23T22:33:55.031576 #898]  INFO -- : 0:  do_postgres (0.10.13) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/do_postgres-0.10.13.gemspec
+I, [2014-01-23T22:33:55.752957 #898]  INFO -- : 0:  dm-postgres-adapter (1.2.0) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-postgres-adapter-1.2.0.gemspec
+I, [2014-01-23T22:34:01.754606 #898]  INFO -- : 0:  eventmachine (1.0.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/eventmachine-1.0.3.gemspec
+E, [2014-01-23T22:34:02.738930 #898] ERROR -- : Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    /Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/bin/ruby extconf.rb --with-pg-config=/library/postgresql/9.3/bin/pg_config
+Using config values from /library/postgresql/9.3/bin/pg_config
+sh: /library/postgresql/9.3/bin/pg_config: No such file or directory
+sh: /library/postgresql/9.3/bin/pg_config: No such file or directory
+checking for libpq-fe.h... no
+Can't find the 'libpq-fe.h header
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/bin/ruby
+	--with-pg
+	--without-pg
+	--with-pg-config
+	--with-pg-dir
+	--without-pg-dir
+	--with-pg-include
+	--without-pg-include=${pg-dir}/include
+	--with-pg-lib
+	--without-pg-lib=${pg-dir}/
+
+extconf failed, exit code 1
+
+Gem files will remain installed in /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/gems/pg-0.17.1 for inspection.
+Results logged to /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/extensions/x86_64-darwin-12/2.0.0-static/pg-0.17.1/gem_make.out
+
+/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/builder.rb:89:in `run'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/ext_conf_builder.rb:37:in `block in build'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/tempfile.rb:324:in `open'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/ext_conf_builder.rb:17:in `build'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/builder.rb:161:in `block (2 levels) in build_extension'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/builder.rb:160:in `chdir'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/builder.rb:160:in `block in build_extension'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/builder.rb:159:in `synchronize'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/builder.rb:159:in `build_extension'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/builder.rb:198:in `block in build_extensions'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/builder.rb:195:in `each'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/ext/builder.rb:195:in `build_extensions'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/installer.rb:677:in `build_extensions'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/installer.rb:232:in `install'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:101:in `block in install'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/forwardable.rb:171:in `each'  \n/Users/pranavaswaroop/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/forwardable.rb:171:in `each'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/cli.rb:257:in `install'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/bin/bundle:23:in `load'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/bin/bundle:23:in `<main>'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'  \n/Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+I, [2014-01-23T22:35:25.952043 #1351]  INFO -- : 0:  i18n (0.6.9) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/i18n-0.6.9.gemspec
+I, [2014-01-23T22:35:25.952325 #1351]  INFO -- : 0:  minitest (4.7.5) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/minitest-4.7.5.gemspec
+I, [2014-01-23T22:35:25.952543 #1351]  INFO -- : 0:  multi_json (1.8.4) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/multi_json-1.8.4.gemspec
+I, [2014-01-23T22:35:25.952760 #1351]  INFO -- : 0:  atomic (1.1.14) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/atomic-1.1.14.gemspec
+I, [2014-01-23T22:35:25.952969 #1351]  INFO -- : 0:  thread_safe (0.1.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/thread_safe-0.1.3.gemspec
+I, [2014-01-23T22:35:25.953196 #1351]  INFO -- : 0:  tzinfo (0.3.38) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/tzinfo-0.3.38.gemspec
+I, [2014-01-23T22:35:25.953422 #1351]  INFO -- : 0:  activesupport (4.0.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activesupport-4.0.2.gemspec
+I, [2014-01-23T22:35:25.953650 #1351]  INFO -- : 0:  builder (3.1.4) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/builder-3.1.4.gemspec
+I, [2014-01-23T22:35:25.953879 #1351]  INFO -- : 0:  activemodel (4.0.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activemodel-4.0.2.gemspec
+I, [2014-01-23T22:35:25.954101 #1351]  INFO -- : 0:  activerecord-deprecated_finders (1.0.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activerecord-deprecated_finders-1.0.3.gemspec
+I, [2014-01-23T22:35:25.954307 #1351]  INFO -- : 0:  arel (4.0.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/arel-4.0.1.gemspec
+I, [2014-01-23T22:35:25.954521 #1351]  INFO -- : 0:  activerecord (4.0.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activerecord-4.0.2.gemspec
+I, [2014-01-23T22:35:25.954718 #1351]  INFO -- : 0:  addressable (2.3.5) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/addressable-2.3.5.gemspec
+I, [2014-01-23T22:35:25.954928 #1351]  INFO -- : 0:  daemons (1.1.9) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/daemons-1.1.9.gemspec
+I, [2014-01-23T22:35:25.955131 #1351]  INFO -- : 0:  data_objects (0.10.13) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/data_objects-0.10.13.gemspec
+I, [2014-01-23T22:35:25.955349 #1351]  INFO -- : 0:  dm-core (1.2.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-core-1.2.1.gemspec
+I, [2014-01-23T22:35:25.955559 #1351]  INFO -- : 0:  dm-do-adapter (1.2.0) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-do-adapter-1.2.0.gemspec
+I, [2014-01-23T22:35:25.955778 #1351]  INFO -- : 0:  dm-migrations (1.2.0) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-migrations-1.2.0.gemspec
+I, [2014-01-23T22:35:25.955989 #1351]  INFO -- : 0:  do_postgres (0.10.13) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/do_postgres-0.10.13.gemspec
+I, [2014-01-23T22:35:25.956214 #1351]  INFO -- : 0:  dm-postgres-adapter (1.2.0) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-postgres-adapter-1.2.0.gemspec
+I, [2014-01-23T22:35:25.956432 #1351]  INFO -- : 0:  eventmachine (1.0.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/eventmachine-1.0.3.gemspec
+I, [2014-01-23T22:35:25.956632 #1351]  INFO -- : 0:  pg (0.15.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/pg-0.15.1.gemspec
+I, [2014-01-23T22:35:25.956850 #1351]  INFO -- : 0:  rack (1.5.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/rack-1.5.2.gemspec
+I, [2014-01-23T22:35:26.595664 #1351]  INFO -- : 0:  rack-protection (1.5.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/rack-protection-1.5.2.gemspec
+I, [2014-01-23T22:35:27.713181 #1351]  INFO -- : 0:  sass (3.2.13) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/sass-3.2.13.gemspec
+I, [2014-01-23T22:35:27.713462 #1351]  INFO -- : 0:  tilt (1.4.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/tilt-1.4.1.gemspec
+I, [2014-01-23T22:35:27.713634 #1351]  INFO -- : 0:  sinatra (1.4.4) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/sinatra-1.4.4.gemspec
+I, [2014-01-23T22:35:27.713803 #1351]  INFO -- : 0:  sinatra-activerecord (1.2.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/sinatra-activerecord-1.2.3.gemspec
+I, [2014-01-23T22:35:28.988701 #1351]  INFO -- : 0:  thin (1.6.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/thin-1.6.1.gemspec
+I, [2014-01-23T22:35:28.989103 #1351]  INFO -- : 0:  bundler (1.5.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/bundler-1.5.1.gemspec
+I, [2014-01-24T14:31:26.664976 #2031]  INFO -- : 0:  i18n (0.6.9) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/i18n-0.6.9.gemspec
+I, [2014-01-24T14:31:26.665305 #2031]  INFO -- : 0:  minitest (4.7.5) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/minitest-4.7.5.gemspec
+I, [2014-01-24T14:31:26.665528 #2031]  INFO -- : 0:  multi_json (1.8.4) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/multi_json-1.8.4.gemspec
+I, [2014-01-24T14:31:26.665741 #2031]  INFO -- : 0:  atomic (1.1.14) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/atomic-1.1.14.gemspec
+I, [2014-01-24T14:31:26.665949 #2031]  INFO -- : 0:  thread_safe (0.1.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/thread_safe-0.1.3.gemspec
+I, [2014-01-24T14:31:26.666146 #2031]  INFO -- : 0:  tzinfo (0.3.38) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/tzinfo-0.3.38.gemspec
+I, [2014-01-24T14:31:26.666357 #2031]  INFO -- : 0:  activesupport (4.0.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activesupport-4.0.2.gemspec
+I, [2014-01-24T14:31:26.666564 #2031]  INFO -- : 0:  builder (3.1.4) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/builder-3.1.4.gemspec
+I, [2014-01-24T14:31:26.666777 #2031]  INFO -- : 0:  activemodel (4.0.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activemodel-4.0.2.gemspec
+I, [2014-01-24T14:31:26.666984 #2031]  INFO -- : 0:  activerecord-deprecated_finders (1.0.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activerecord-deprecated_finders-1.0.3.gemspec
+I, [2014-01-24T14:31:26.667199 #2031]  INFO -- : 0:  arel (4.0.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/arel-4.0.1.gemspec
+I, [2014-01-24T14:31:26.667399 #2031]  INFO -- : 0:  activerecord (4.0.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/activerecord-4.0.2.gemspec
+I, [2014-01-24T14:31:26.667601 #2031]  INFO -- : 0:  addressable (2.3.5) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/addressable-2.3.5.gemspec
+I, [2014-01-24T14:31:26.667801 #2031]  INFO -- : 0:  daemons (1.1.9) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/daemons-1.1.9.gemspec
+I, [2014-01-24T14:31:26.668002 #2031]  INFO -- : 0:  data_objects (0.10.13) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/data_objects-0.10.13.gemspec
+I, [2014-01-24T14:31:26.668202 #2031]  INFO -- : 0:  dm-core (1.2.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-core-1.2.1.gemspec
+I, [2014-01-24T14:31:26.668393 #2031]  INFO -- : 0:  dm-do-adapter (1.2.0) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-do-adapter-1.2.0.gemspec
+I, [2014-01-24T14:31:26.668594 #2031]  INFO -- : 0:  dm-migrations (1.2.0) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-migrations-1.2.0.gemspec
+I, [2014-01-24T14:31:26.668807 #2031]  INFO -- : 0:  do_postgres (0.10.13) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/do_postgres-0.10.13.gemspec
+I, [2014-01-24T14:31:26.669007 #2031]  INFO -- : 0:  dm-postgres-adapter (1.2.0) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/dm-postgres-adapter-1.2.0.gemspec
+I, [2014-01-24T14:31:26.669209 #2031]  INFO -- : 0:  eventmachine (1.0.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/eventmachine-1.0.3.gemspec
+I, [2014-01-24T14:31:26.669407 #2031]  INFO -- : 0:  pg (0.15.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/pg-0.15.1.gemspec
+I, [2014-01-24T14:31:26.669599 #2031]  INFO -- : 0:  rack (1.5.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/rack-1.5.2.gemspec
+I, [2014-01-24T14:31:26.669812 #2031]  INFO -- : 0:  rack-protection (1.5.2) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/rack-protection-1.5.2.gemspec
+I, [2014-01-24T14:31:26.670013 #2031]  INFO -- : 0:  sass (3.2.13) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/sass-3.2.13.gemspec
+I, [2014-01-24T14:31:26.670219 #2031]  INFO -- : 0:  tilt (1.4.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/tilt-1.4.1.gemspec
+I, [2014-01-24T14:31:26.670452 #2031]  INFO -- : 0:  sinatra (1.4.4) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/sinatra-1.4.4.gemspec
+I, [2014-01-24T14:31:26.670666 #2031]  INFO -- : 0:  sinatra-activerecord (1.2.3) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/sinatra-activerecord-1.2.3.gemspec
+I, [2014-01-24T14:31:26.670856 #2031]  INFO -- : 0:  thin (1.6.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353/specifications/thin-1.6.1.gemspec
+I, [2014-01-24T14:31:26.671049 #2031]  INFO -- : 0:  bundler (1.5.1) from /Users/pranavaswaroop/.rvm/gems/ruby-2.0.0-p353@global/specifications/bundler-1.5.1.gemspec

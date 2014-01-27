@@ -1,8 +1,10 @@
-source :rubygems
+source "https://rubygems.org"
+
 gem "sinatra"
+gem "sinatra-activerecord"
 gem "sass"
 gem "dm-core"
 gem "dm-migrations"
 gem "thin"
-gem "pg"
+gem "pg", '0.15.1'
 gem "dm-postgres-adapter"
