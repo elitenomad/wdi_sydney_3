@@ -1,0 +1,17 @@
+<%= form_for(@post) do |f| %>
+	<%= render 'shared/errors' %>
+
+
+	<p>
+		<%= f.label :title %>
+        <%= f.text_field :title, autofocus: true %>
+	</p>
+	<p>
+		<%= f.label :article %>
+        <%= f.text_area :article, rows:30,cols:60 %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

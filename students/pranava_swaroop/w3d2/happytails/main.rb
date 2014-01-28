@@ -213,7 +213,7 @@ get '/shelters/:id/pets/:pet_id/adopt' do
 
 	pet = @shelter.pets.find(params[:pet_id])
 	adopt = pet.update_attributes(adopted:true, adopted_at: Time.now)
-	binding.pry
+	#binding.pry
 	if adopt
 		pets = @shelter['capacity'] #.pets("where adopted=false").count
 		updated_count =  pets+1#@shelter['tot_capacity'] - pets

@@ -1,0 +1,48 @@
+<article id="post">
+  <p>
+    <strong>Title:</strong>
+    <%= @post.title %>
+  </p>
+ 
+  <p>
+    <strong>Article:</strong>
+    <%= @post.article %>
+  </p>
+
+  <h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+
+  <p>
+    <%= link_to 'Destroy Comment', [comment.post, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end %>
+
+  <h2>Add Comment</h2>
+  <%= form_for([@post,@post.comments.build]) do |f| %>
+	<p>
+		<%= f.label :commenter %>
+    <%= f.text_field :commenter, autofocus: true %>
+	</p>
+	<p>
+		<%= f.label :body %>
+    <%= f.text_area :body %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+  <% end %>
+ <%= link_to 'Edit Post', edit_post_path(@post) %> |
+<%= link_to 'Back to Posts', posts_path %>
+</article>
