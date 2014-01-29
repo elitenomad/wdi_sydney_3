@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @song.name %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @song.length %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @song.description %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @song.artist.name %>
+</p>
+
+<p>
+  <strong>URL Video</strong>
+  <%= video_tag @song.urlpath,  size: "560x340",poster: "home.jpg",controls: true,autobuffer: true %>
+</p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @song.album.name if !@album.nil? %>
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table">
+        <% if !@album.nil? %>
+          <tr>
+            <td><%= link_to @album.name, album_path(@album)  %></td>
+            <td><%= @album.description %></td>
+          </tr>
+        <% end %>
+          <tr>
+            <td><%= link_to @artist.name, artist_path(@artist) %></td>
+            <td><%= @artist.description %></td>
+           
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>
