@@ -1,13 +1,13 @@
 TunrApp::Application.routes.draw do
   
-  get "static_pages/index"
-  get "static_pages/about"
-  get "static_pages/contact"
+   root "application#index"
+
+
   resources :songs
 
   resources :albums
 
-  root "application#index"
+  
 
   resources :artists
 

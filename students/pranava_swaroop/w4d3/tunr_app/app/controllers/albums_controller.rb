@@ -1,10 +1,12 @@
 class AlbumsController < ApplicationController
   before_action :set_album, only: [:show, :edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction 
 
   # GET /albums
   # GET /albums.json
   def index
-    @albums = Album.all
+    #@albums = Album.all
+    @albums = Album.order(sort_column + " " + sort_direction)
   end
 
   # GET /albums/1
@@ -27,6 +29,7 @@ class AlbumsController < ApplicationController
 
   # GET /albums/1/edit
   def edit
+    
   end
 
   # POST /albums
@@ -67,6 +70,14 @@ class AlbumsController < ApplicationController
       format.html { redirect_to albums_url }
       format.json { head :no_content }
     end
+  end
+
+  def sort_column
+    Album.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 
   private
