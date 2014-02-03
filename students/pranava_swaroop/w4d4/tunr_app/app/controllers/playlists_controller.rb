@@ -35,10 +35,8 @@ class PlaylistsController < ApplicationController
   def update
   	params[:playlist][:song_ids] ||= []
   	@playlist.song_ids = params[:playlist][:song_ids]
-  	@playlist.update(playlist_params)
-  	
 
-  	if @playlist
+  	if @playlist.update(playlist_params)
   		flash.now[:notice]="playlist updated successfully"
   		@playlists = Playlist.all
   		redirect_to playlists_path

@@ -12,7 +12,7 @@ TunrApp::Application.routes.draw do
    		resources :songs
    end
 
-   resources :songs
+   resources :songs #, only: [:index]
    #resources :playlists
 
    resources :playlists 
