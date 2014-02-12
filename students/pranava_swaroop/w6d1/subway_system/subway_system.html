@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SUBWAY SYSTEM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1 class="text-muted">Subway System</h1>
+    </div>
+</div>
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var subway_hash =  {
+            "N" : ['TimeSquare','34th','28th','23rd','UnionSquare','8th'],
+            "L" : ['8th','6th','UnionSquare','3rd','1st'],
+            "6L": ['GrandCentral','33rd','28th','23rd','UnionSquare','Astorplace'] 
+        };
+
+    var intersection = "UnionSquare";
+
+    function calculate_route(line_source,stop_source,line_dest,stop_dest,subway_hash){
+        if(line_source === line_dest) {
+
+            index_source = subway_hash[line_source].indexOf(stop_source);
+            index_dest = subway_hash[line_dest].indexOf(stop_dest);
+            stop_source_array = subway_hash[line_source];
+
+
+            var n = print_path(line_source,line_dest,index_source,index_dest,stop_source_array);
+            console.log("No of paths: "+ n);
+        }else{
+            index_source = subway_hash[line_source].indexOf(stop_source);
+
+            middle_dest = subway_hash[line_source].indexOf(intersection);
+            intermediate_middle_source = subway_hash[line_dest].indexOf(intersection);
+
+            index_dest = subway_hash[line_dest].indexOf(stop_dest);
+            stop_source_array = subway_hash[line_source];
+            stop_dest_array = subway_hash[line_dest];
+
+
+           var n1 = print_path(line_source,line_dest,index_source,middle_dest,stop_source_array);
+           var n2 = print_path(line_dest,line_dest,intermediate_middle_source,index_dest,stop_dest_array);
+            var total_paths = parseInt(n1) + parseInt(n2);
+            console.log(total_paths);
+        }
+    }
+
+
+
+    function print_path(line_source,line_dest,index_source,index_dest,stop_source_array){
+        no_of_stops = 0;
+        if(index_source < index_dest){
+            // for(var i=index_source, i<=index_dest;i++){
+            // //for i in index_source..index_dest
+            //     print line_source +'-'+ stop_source_array[i] + " =~~=> " 
+            // }
+
+            return index_dest-index_source;
+        }else{
+            // index_source.downto(index_dest) {|i| print line_source +'-'+ stop_source_array[i] + " =~~=> "}
+
+            return index_source-index_dest;
+        }
+    }
+
+</script>
+</body>
+</html>
